@@ -1,0 +1,186 @@
+\documentclass[12pt,a4paper]{article}
+
+% 필수 패키지들
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[korean,english]{babel}
+\usepackage{kotex}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=red,urlcolor=blue]{hyperref}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% 페이지 설정
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% 코드 스타일 설정
+\lstset{
+    backgroundcolor=\color{gray!10},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    showstringspaces=false
+}
+
+% 제목과 저자 정보
+\title{안녕 논문임}
+\author{
+    홍길동\thanks{교신저자: gildong@example.com} \\
+    \textit{컴퓨터과학과} \\
+    \textit{예시대학교} \\
+    \textit{서울, 대한민국}
+    \and
+    김철수 \\
+    \textit{인공지능학과} \\
+    \textit{예시대학교} \\
+    \textit{서울, 대한민국}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+본 논문의 초록을 여기에 작성하세요. 연구의 목적, 방법, 주요 결과, 그리고 결론을 간략하게 요약해서 설명합니다. 초록은 보통 150-250단어 정도로 작성하며, 독자가 논문의 전체 내용을 빠르게 파악할 수 있도록 핵심 내용을 담아야 합니다.
+\end{abstract}
+
+\textbf{키워드:} 키워드1, 키워드2, 키워드3, 키워드4, 키워드5
+
+\section{서론}
+\label{sec:introduction}
+
+연구의 배경과 동기를 설명하고, 해결하고자 하는 문제를 명확히 제시합니다. 
+
+\subsection{연구 배경}
+연구 분야의 현재 상황과 문제점을 설명합니다.
+
+\subsection{연구 목적}
+본 연구에서 달성하고자 하는 목표를 구체적으로 기술합니다.
+
+\subsection{논문 구성}
+논문의 각 장별 구성과 내용을 간략히 소개합니다. 2장에서는 관련 연구를, 3장에서는 제안하는 방법론을, 4장에서는 실험 결과를, 마지막으로 5장에서는 결론을 다룹니다.
+
+\section{관련 연구}
+\label{sec:related_work}
+
+기존 연구들을 정리하고 분석합니다. 각 연구의 장단점을 객관적으로 평가하고, 본 연구와의 차별점을 명확히 제시합니다.
+
+\subsection{기존 접근법들}
+관련 연구 분야의 주요 접근법들을 분류하여 설명합니다.
+
+\subsection{기존 연구의 한계점}
+선행 연구들의 한계점과 개선이 필요한 부분을 분석합니다.
+
+\section{제안 방법론}
+\label{sec:methodology}
+
+본 연구에서 제안하는 방법론을 상세히 기술합니다.
+
+\subsection{전체 시스템 개요}
+제안하는 시스템의 전체적인 구조와 동작 원리를 설명합니다.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{figures/system_overview.png}
+    \caption{제안하는 시스템의 전체 구조도}
+    \label{fig:system_overview}
+\end{figure}
+
+\subsection{핵심 알고리즘}
+제안하는 방법론의 핵심 알고리즘을 기술합니다.
+
+\begin{algorithm}
+\caption{제안하는 알고리즘}
+\label{alg:proposed}
+\begin{algorithmic}[1]
+\REQUIRE 입력 데이터 $X$
+\ENSURE 결과 $Y$
+\STATE 초기화
+\FOR{각 데이터 포인트 $x_i \in X$}
+    \STATE 처리 단계 1
+    \STATE 처리 단계 2
+\ENDFOR
+\RETURN $Y$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{이론적 분석}
+제안하는 방법의 시간 복잡도, 공간 복잡도 등을 분석합니다.
+
+\section{실험 및 결과}
+\label{sec:experiments}
+
+실험 설정, 데이터셋, 평가 지표, 그리고 실험 결과를 상세히 기술합니다.
+
+\subsection{실험 환경}
+실험에 사용된 하드웨어, 소프트웨어 환경을 명시합니다.
+
+\subsection{데이터셋}
+실험에 사용된 데이터셋의 특성과 전처리 과정을 설명합니다.
+
+\subsection{평가 지표}
+성능 평가에 사용된 지표들을 정의하고 선택 이유를 설명합니다.
+
+\subsection{실험 결과}
+\begin{table}[htbp]
+\centering
+\caption{실험 결과 비교}
+\label{tab:results}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+방법론 & 정확도 & 정밀도 & 재현율 & F1-점수 \\
+\midrule
+기존 방법 1 & 85.2\% & 82.1\% & 88.3\% & 85.1\% \\
+기존 방법 2 & 87.5\% & 85.2\% & 89.1\% & 87.1\% \\
+\textbf{제안 방법} & \textbf{92.3\%} & \textbf{90.1\%} & \textbf{94.2\%} & \textbf{92.1\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{결과 분석}
+실험 결과를 분석하고 제안하는 방법의 우수성을 입증합니다.
+
+\section{논의}
+\label{sec:discussion}
+
+실험 결과에 대한 심층적인 분석과 해석을 제공합니다.
+
+\subsection{성능 향상의 원인}
+제안하는 방법이 우수한 성능을 보이는 이유를 분석합니다.
+
+\subsection{한계점}
+연구의 한계점과 향후 개선 방향을 논의합니다.
+
+\section{결론}
+\label{sec:conclusion}
+
+연구의 주요 기여점을 요약하고, 향후 연구 방향을 제시합니다.
+
+\subsection{주요 기여점}
+본 연구의 주요 성과와 기여점을 정리합니다.
+
+\subsection{향후 연구}
+현재 연구의 한계를 극복하고 발전시킬 수 있는 향후 연구 방향을 제시합니다.
+
+% 감사의 글
+\section*{감사의 글}
+연구 지원에 대한 감사 인사를 기술합니다.
+
+% 참고문헌
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document} 
