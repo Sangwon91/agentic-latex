@@ -1,15 +1,11 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[preprint,12pt]{elsarticle}
 
-% Essential packages
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% Essential packages for multilingual support
 \usepackage{kotex}
 \usepackage{CJKutf8}
-\usepackage{amsmath,amsfonts,amssymb}
-\usepackage{graphicx}
-\usepackage{svg}
+\usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=red,urlcolor=blue]{hyperref}
-\usepackage{cite}
 \usepackage{url}
 \usepackage{booktabs}
 \usepackage{array}
@@ -18,11 +14,9 @@
 \usepackage{algorithmic}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{svg}
 
-% Page settings
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{setspace}
-\onehalfspacing
+\journal{Journal Name}
 
 % Code style settings
 \lstset{
@@ -35,24 +29,27 @@
     showstringspaces=false
 }
 
-% Title and author information
-\title{A Novel Approach to Machine Learning-based Data Analysis}
-\author{
-    John Doe\thanks{Corresponding author: johndoe@example.com} \\
-    \textit{Department of Computer Science} \\
-    \textit{Example University} \\
-    \textit{Seoul, South Korea}
-    \and
-    Jane Smith \\
-    \textit{Department of Artificial Intelligence} \\
-    \textit{Example University} \\
-    \textit{Seoul, South Korea}
-}
-\date{\today}
-
 \begin{document}
 
-\maketitle
+\begin{frontmatter}
+
+\title{A Novel Approach to Machine Learning-based Data Analysis}
+
+\author[label1]{John Doe\corref{cor1}}
+\ead{johndoe@example.com}
+\cortext[cor1]{Corresponding author}
+
+\author[label2]{Jane Smith}
+
+\affiliation[label1]{organization={Department of Computer Science},
+                     addressline={Example University},
+                     city={Seoul},
+                     country={South Korea}}
+
+\affiliation[label2]{organization={Department of Artificial Intelligence},
+                     addressline={Example University}, 
+                     city={Seoul},
+                     country={South Korea}}
 
 \begin{abstract}
 This paper presents a novel approach to machine learning-based data analysis. \\
@@ -86,11 +83,17 @@ This research contributes to the advancement of machine learning applications in
 \end{CJK}
 \end{abstract}
 
-\textbf{Keywords:} machine learning, deep learning, data analysis, artificial intelligence, neural networks \\
-\textbf{키워드:} 기계학습, 딥러닝, 데이터 분석, 인공지능, 신경망 \\
-\begin{CJK}{UTF8}{min}
-\textbf{キーワード:} 機械学習, 深層学習, データ分析, 人工知能, ニューラルネットワーク
-\end{CJK}
+\begin{highlights}
+\item Novel algorithmic approach combining deep learning with traditional statistical methods
+\item Significant performance improvements with 92.3\% accuracy rate
+\item Theoretical insights into data manifold curvature processing
+\end{highlights}
+
+\begin{keyword}
+machine learning \sep deep learning \sep data analysis \sep artificial intelligence \sep neural networks
+\end{keyword}
+
+\end{frontmatter}
 
 \section{Introduction}
 \label{sec:introduction}
@@ -428,7 +431,7 @@ This work was supported by the National Research Foundation of Korea. \\
 \end{CJK}
 
 % References
-\bibliographystyle{ieeetr}
+\bibliographystyle{elsarticle-num}
 \bibliography{references}
 
 \end{document} 
