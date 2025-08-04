@@ -11,14 +11,14 @@ all: $(PDF)
 
 # PDF 생성 (참고문헌 포함)
 $(PDF): $(TEX) $(BIB)
-	pdflatex $(MAIN)
+	pdflatex --shell-escape $(MAIN)
 	bibtex $(MAIN)
-	pdflatex $(MAIN)
-	pdflatex $(MAIN)
+	pdflatex --shell-escape $(MAIN)
+	pdflatex --shell-escape $(MAIN)
 
 # 빠른 컴파일 (참고문헌 없이)
 quick: $(TEX)
-	pdflatex $(MAIN)
+	pdflatex --shell-escape $(MAIN)
 
 # 정리
 clean:

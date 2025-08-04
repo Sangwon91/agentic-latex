@@ -1,97 +1,13 @@
-# LaTeX 컴파일 과정에서 생성되는 임시 파일들
 *.aux
 *.bbl
-*.bcf
 *.blg
-*.brf
-*.fdb_latexmk
-*.fls
-*.idx
-*.ilg
-*.ind
-*.lof
 *.log
-*.lot
 *.out
-*.run.xml
-*.synctex.gz
 *.toc
-*.acn
-*.acr
-*.alg
-*.glg
-*.glo
-*.gls
-*.ist
-*.loa
-*.nav
-*.snm
-*.vrb
-*.xdy
-
-# BibTeX 관련 파일들
-*.bib.bak
-*.bib.swp
-
-# 백업 파일들
-*~
-*.backup
-*.bak
-
-# 운영체제별 임시 파일들
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# 에디터별 임시 파일들
-# VS Code
-.vscode/
-# TeXstudio
-*.txss
-# TeXworks
-*.tws
-# Vim
-*.swp
-*.swo
-*~
-
-# PDF 파일 (최종 결과물은 제외하고 싶다면 주석 해제)
-# *.pdf
-
-# 그림 편집 소스 파일들 (선택적)
-# *.ai
-# *.psd
-# *.sketch
-
-# latexmk 관련
-.latexmkrc
-latexmkrc
-
-# 알고리즘 패키지 관련
-*.alg
-*.loa
-
-# 용어집 관련
-*.glsdefs
-
-# 색인 관련
-*.idx
-*.ind
-*.ilg
-
-# 교차 참조 관련
-*.auxlock
-
-# 임시 디렉토리
-tmp/
-temp/
-_minted-*/
-
-# 컴파일된 Python 파일들 (Python 스크립트 사용 시)
-__pycache__/
-*.py[cod]
-*$py.class
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+main.pdf
+svg-inkscape/
